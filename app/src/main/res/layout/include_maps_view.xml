@@ -58,6 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
+        android:src="@drawable/places_ic_search"
         android:layout_alignParentRight="true" />
 
 </RelativeLayout>

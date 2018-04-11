@@ -54,6 +54,9 @@ class MainFragment : Fragment(), MainContract.View, OnMapReadyCallback {
                     getMapAsync(this@MainFragment)
                 }
 
+        fab.setOnClickListener {
+
+        }
     }
 
     private fun drawerToggle() : ActionBarDrawerToggle {
