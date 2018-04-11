@@ -5,7 +5,7 @@ import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import com.taskail.parkstashproject.PREPOLUATE_DATA
+import com.taskail.parkstashproject.PREPOPULATE_DATA
 
 /**
  *Created by ed on 4/11/18.
@@ -35,7 +35,7 @@ abstract class ParkStashDatabase : RoomDatabase() {
                                     super.onCreate(db)
 
                                     ioThread {
-                                        getInstance(context).locationsDao().prePopulate(PREPOLUATE_DATA)
+                                        getInstance(context).locationsDao().prePopulate(PREPOPULATE_DATA)
                                     }
                                 }
                             })

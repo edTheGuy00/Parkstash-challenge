@@ -10,7 +10,7 @@ import com.taskail.parkstashproject.data.Location
 const val MOCK_LAT = 32.7941983
 const val MOCK_LNG = -96.7655
 
-val PREPOLUATE_DATA = listOf(
+val PREPOPULATE_DATA = listOf(
         Location(
                 locationTitle = "The DEC",
                 locationLat = 32.7811781,
