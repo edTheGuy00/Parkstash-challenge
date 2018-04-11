@@ -8,12 +8,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.location.places.AutocompleteFilter
+import com.google.android.gms.location.places.Place
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MarkerOptions
+import com.taskail.googleplacessearchdialog.SimplePlacesSearchDialog
+import com.taskail.googleplacessearchdialog.SimplePlacesSearchDialogBuilder
 import com.taskail.parkstashproject.data.Location
 import kotlinx.android.synthetic.main.fragment_map_view.*
 import kotlinx.android.synthetic.main.include_maps_view.*
@@ -54,8 +59,9 @@ class MainFragment : Fragment(), MainContract.View, OnMapReadyCallback {
                     getMapAsync(this@MainFragment)
                 }
 
-        fab.setOnClickListener {
 
+        fab.setOnClickListener {
+            presenter.handleFabClick()
         }
     }
 

@@ -3,6 +3,12 @@ package com.taskail.parkstashproject
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.google.android.gms.location.places.AutocompleteFilter
+import com.google.android.gms.location.places.Place
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
+import com.taskail.googleplacessearchdialog.SimplePlacesSearchDialog
+import com.taskail.googleplacessearchdialog.SimplePlacesSearchDialogBuilder
 import com.taskail.parkstashproject.data.Location
 import com.taskail.parkstashproject.data.LocationDataDource
 import com.taskail.parkstashproject.data.LocationRepo
@@ -45,5 +51,19 @@ class MainActivity : AppCompatActivity(), MainContract.Presenter {
                 Log.e(TAG, "Data not Available")
             }
         })
+    }
+
+    override fun handleFabClick() {
+        SimplePlacesSearchDialogBuilder(this)
+                .setResultsFilter(AutocompleteFilter.TYPE_FILTER_ESTABLISHMENT)
+                .setLatLngBounds(DALLAS_TX_BOUNDS)
+                .setSearchHint("Add a new location")
+                .setLocationListener(object : SimplePlacesSearchDialog.PlaceSelectedCallback {
+                    override fun onPlaceSelected(place: Place) {
+
+                    }
+                })
+                .build()
+                .show()
     }
 }

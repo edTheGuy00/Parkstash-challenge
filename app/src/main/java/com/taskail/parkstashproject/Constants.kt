@@ -1,5 +1,6 @@
 package com.taskail.parkstashproject
-
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.LatLngBounds
 import com.taskail.parkstashproject.data.Location
 
 /**
@@ -9,6 +10,8 @@ import com.taskail.parkstashproject.data.Location
 
 const val MOCK_LAT = 32.7941983
 const val MOCK_LNG = -96.7655
+
+val DALLAS_TX_BOUNDS = LatLngBounds(LatLng(32.694865977875054, -96.85546875), LatLng(32.84267363195431, -96.6796875))
 
 val PREPOPULATE_DATA = listOf(
         Location(

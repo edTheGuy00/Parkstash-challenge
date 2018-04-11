@@ -18,5 +18,7 @@ interface MainContract {
     interface Presenter {
 
         fun getLocations(function: (List<Location>) -> Unit)
+
+        fun handleFabClick()
     }
 }
