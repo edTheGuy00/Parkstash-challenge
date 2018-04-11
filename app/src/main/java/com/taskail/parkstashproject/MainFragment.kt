@@ -6,9 +6,12 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.fragment_map_view.*
 import kotlinx.android.synthetic.main.include_maps_view.*
 
@@ -49,7 +52,14 @@ class MainFragment : Fragment(), MainContract.View, OnMapReadyCallback {
         return ActionBarDrawerToggle(activity, drawerLayout, toolbar, R.string.open, R.string.close)
     }
 
-    override fun onMapReady(googleMap: GoogleMap?) {
+    override fun onMapReady(googleMap: GoogleMap) {
+        val mockLocation = LatLng(MOCK_LAT, MOCK_LNG)
 
+        with(googleMap) {
+            addMarker(MarkerOptions().position(mockLocation).title("Your Location"))
+            moveCamera(CameraUpdateFactory.newLatLng(mockLocation))
+            animateCamera(CameraUpdateFactory.zoomTo(12.0f))
+            uiSettings.isMapToolbarEnabled = false
+        }
     }
 }
