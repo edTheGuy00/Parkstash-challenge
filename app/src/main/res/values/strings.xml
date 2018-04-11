@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ParkStashProject</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
