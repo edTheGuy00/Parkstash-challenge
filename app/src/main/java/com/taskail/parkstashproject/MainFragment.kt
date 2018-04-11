@@ -26,8 +26,12 @@ class MainFragment : Fragment(), MainContract.View {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
+        drawerLayout.addDrawerListener(
+                drawerToggle()
+                        .apply {
+                            syncState()
+                        }
+        )
     }
 
     private fun drawerToggle() : ActionBarDrawerToggle {
