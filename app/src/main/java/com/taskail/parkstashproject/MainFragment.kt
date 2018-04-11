@@ -6,6 +6,9 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import kotlinx.android.synthetic.main.fragment_map_view.*
 import kotlinx.android.synthetic.main.include_maps_view.*
 
@@ -13,7 +16,7 @@ import kotlinx.android.synthetic.main.include_maps_view.*
  *Created by ed on 4/11/18.
  */
 
-class MainFragment : Fragment(), MainContract.View {
+class MainFragment : Fragment(), MainContract.View, OnMapReadyCallback {
 
     override lateinit var presenter: MainContract.Presenter
 
@@ -32,9 +35,21 @@ class MainFragment : Fragment(), MainContract.View {
                             syncState()
                         }
         )
+
+        (childFragmentManager
+                .findFragmentById(R.id.map)
+                as SupportMapFragment)
+                .apply {
+                    getMapAsync(this@MainFragment)
+                }
+
     }
 
     private fun drawerToggle() : ActionBarDrawerToggle {
         return ActionBarDrawerToggle(activity, drawerLayout, toolbar, R.string.open, R.string.close)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap?) {
+
     }
 }
