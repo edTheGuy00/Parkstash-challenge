@@ -1,5 +1,8 @@
 package com.taskail.parkstashproject
 
+import com.taskail.parkstashproject.data.Location
+
+
 /**
  *Created by ed on 4/11/18.
  */
@@ -14,6 +17,6 @@ interface MainContract {
 
     interface Presenter {
 
-        fun start()
+        fun getLocations(locations: List<Location>)
     }
 }
