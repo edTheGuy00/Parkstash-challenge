@@ -17,6 +17,6 @@ interface MainContract {
 
     interface Presenter {
 
-        fun getLocations(locations: List<Location>)
+        fun getLocations(function: (List<Location>) -> Unit)
     }
 }
