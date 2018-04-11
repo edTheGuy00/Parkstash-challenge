@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <group android:checkableBehavior="none">
+        <item
+            android:icon="@drawable/ic_book_svg"
+            android:id="@+id/nav_book"
+            android:title="@string/book_spot" />
+        <item
+            android:icon="@drawable/house"
+            android:id="@+id/nav_list"
+            android:title="@string/list_spot" />
+        <item
+            android:icon="@drawable/ic_pastbooking_svg"
+            android:id="@+id/nav_past"
+            android:title="@string/past_booking" />
+        <item
+            android:icon="@drawable/ic_payment_svg"
+            android:id="@+id/nav_payment"
+            android:title="@string/payments" />
+        <item
+            android:icon="@drawable/ic_promo_svg"
+            android:id="@+id/nav_promo"
+            android:title="@string/promos" />
+        <item
+            android:icon="@drawable/ic_wallet_svg"
+            android:id="@+id/nav_wallet"
+            android:title="@string/wallet" />
+        <item
+            android:icon="@drawable/ic_profile_svg"
+            android:id="@+id/nav_profile"
+            android:title="@string/profile" />
+        <item
+            android:icon="@drawable/ic_rating_svg"
+            android:id="@+id/nav_ratings"
+            android:title="@string/ratings" />
+        <item
+            android:icon="@drawable/ic_help_svg"
+            android:id="@+id/nav_help"
+            android:title="@string/help" />
+        <item
+            android:icon="@drawable/ic_legal_svg"
+            android:id="@+id/nav_legal"
+            android:title="@string/legal" />
+        <item
+            android:icon="@drawable/ic_logout_svg"
+            android:id="@+id/nav_logout"
+            android:title="@string/logout" />
+
+    </group>
+
 </menu>

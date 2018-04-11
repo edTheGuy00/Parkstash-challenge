@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">ParkStashProject</string>
 
+    <string name="welcome">Welcome</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="book_spot">Book a Spot</string>
+    <string name="list_spot">List a Spot</string>
+    <string name="past_booking">Past Bookings</string>
+    <string name="payments">Payments</string>
+    <string name="promos">Promotions</string>
+    <string name="wallet">Wallet</string>
+    <string name="profile">My Profile</string>
+    <string name="ratings">Ratings</string>
+    <string name="help">Help</string>
+    <string name="legal">Legal</string>
+    <string name="logout">Logout</string>
 </resources>
