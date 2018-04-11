@@ -1,6 +1,7 @@
 package com.taskail.parkstashproject
 
-import com.taskail.parkstashproject.data.Location
+import com.google.android.gms.maps.CameraUpdate
+import com.google.android.gms.maps.model.MarkerOptions
 
 
 /**
@@ -13,11 +14,14 @@ interface MainContract {
 
         var presenter: Presenter
 
+        fun displayLocation(marker: MarkerOptions)
+
+        fun moveCamera(moveTo: CameraUpdate)
     }
 
     interface Presenter {
 
-        fun getLocations(function: (List<Location>) -> Unit)
+        fun getLocations()
 
         fun handleFabClick()
     }
